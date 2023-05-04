@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "ey3X5F+f0fpIUO9KPjWAdLHNk1Ta1ST6ET3r88aEjIW5JJuvLW7GGxCRaCiAoIifxjNp8w8FNjjk6bGQQoOhWw==",
+  "success": true,
+  "projectFilePath": "/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/WowSudoko.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/jusajan/.nuget/packages/acr.userdialogs/7.2.0.564/acr.userdialogs.7.2.0.564.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/btprogresshud/1.3.5/btprogresshud.1.3.5.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/com.airbnb.ios.lottie/2.5.8/com.airbnb.ios.lottie.2.5.8.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/com.airbnb.xamarin.forms.lottie/3.0.0/com.airbnb.xamarin.forms.lottie.3.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/dryioc.dll/4.7.7/dryioc.dll.4.7.7.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/dynamicstacklayout/2017.12.4/dynamicstacklayout.2017.12.4.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/prism.core/8.1.97/prism.core.8.1.97.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/prism.dryioc.forms/8.1.97/prism.dryioc.forms.8.1.97.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/prism.forms/8.1.97/prism.forms.8.1.97.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/prism.plugin.popups/8.0.76/prism.plugin.popups.8.0.76.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/rg.plugins.popup/2.0.0.11/rg.plugins.popup.2.0.0.11.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlite-net-pcl/1.8.116/sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.bundle_green/2.0.4/sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.core/2.0.4/sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.4/sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.reflection.emit.lightweight/4.3.0/system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/xamarin.essentials/1.7.3/xamarin.essentials.1.7.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/xamarin.forms/5.0.0.2401/xamarin.forms.5.0.0.2401.nupkg.sha512"
+  ],
+  "logs": []
+}

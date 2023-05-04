@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WowSudoko.Views.NewBallPage"
+    BackgroundColor="White">
+    <ContentPage.Content>
+        <Frame
+                Padding="0"
+                BackgroundColor="#FFFFFF"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+        <Label
+            x:Name="ball"
+            Text="⚫"
+            FontSize="20"
+            HorizontalOptions="StartAndExpand"
+            VerticalOptions="StartAndExpand"
+            TranslationX="335"
+            TranslationY="590"/>
+            </Frame>
+    </ContentPage.Content>
+</ContentPage>

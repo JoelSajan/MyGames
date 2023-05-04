@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"  
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+             x:Class="Project3.Pages.ShowPopupDemo"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"  
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:animationPage="clr-namespace:Project3.Pages"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             BackgroundColor="Transparent">  
+    <pages:PopupPage.Animation>  
+        <animations:ScaleAnimation   
+                      PositionIn="Center"  
+                      PositionOut="Center"  
+                      ScaleIn="1.2"  
+                      ScaleOut="0.8"  
+                      DurationIn="400"  
+                      DurationOut="100"  
+                      EasingIn="SinOut"  
+                      EasingOut="SinIn"
+      HasBackgroundAnimation="False"/>  
+    </pages:PopupPage.Animation>  
+    <StackLayout VerticalOptions="Center"  Padding="20,0" HorizontalOptions="FillAndExpand" HeightRequest="250">  
+        <Frame CornerRadius="10" Padding="0" BorderColor="#20e4ff" >  
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="5*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="2.5*"/>
+                </Grid.RowDefinitions>
+               
+                <Label Grid.Row="0" Text="Quit !" TextDecorations="Underline" FontAttributes="Bold" TextColor="#44677b" FontSize="25" HorizontalOptions="Center" ></Label>
+                 <forms:AnimationView
+                    Grid.Row="1"
+                    x:Name="animationView"
+                    Animation="ExitAnimation.json"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Loop="True"
+                    AutoPlay="True"/>
+                <Label Grid.Row="2" Text="Exit really?" TextColor="#44677b" HorizontalOptions="CenterAndExpand"/>  
+                <BoxView Grid.Row="3" HeightRequest="1" BackgroundColor="#20e4ff"/>
+                <ScrollView Grid.Row="4">
+                    <StackLayout>  
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">  
+                            <Button Margin="10,0"  Text="Yep!" TextColor="White" BackgroundColor="#44677b" CornerRadius="10" Clicked="Button_Clicked"  HorizontalOptions="Start"></Button>  
+                            <Button Margin="10,0"  Text="Nope" TextColor="White" BackgroundColor="#44677b" CornerRadius="10" Clicked="Button_Clicked" HorizontalOptions="Start"></Button>  
+                        </StackLayout>  
+                    </StackLayout>  
+                </ScrollView>  
+            </Grid>  
+        </Frame>  
+    </StackLayout>  
+</pages:PopupPage>  

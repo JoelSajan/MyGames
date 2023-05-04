@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{FB215B99-D37B-4D02-8ADE-213CBF91AE72}|Default">
+  <MonoDevelop.Ide.ItemProperties.AppTTT.Android PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AppTTT/GeneralClass.cs">
+    <Files>
+      <File FileName="AppTTT/Interface/IDatabaseManager.cs" Line="1" Column="1" IsPinned="True" />
+      <File FileName="AppTTT/App.xaml.cs" />
+      <File FileName="AppTTT/MainPageModel.cs" />
+      <File FileName="AppTTT/MainMenuPageModel.cs" />
+      <File FileName="AppTTT/Setup.cs" />
+      <File FileName="AppTTT.Android/StorageService.cs" />
+      <File FileName="AppTTT.Android/MainActivity.cs" />
+      <File FileName="AppTTT/Interface/IStorageService.cs" />
+      <File FileName="AppTTT/PlayerInfo.cs" />
+      <File FileName="AppTTT/GeneralClass.cs" Line="13" Column="1" />
+      <File FileName="AppTTT/Data.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AppTTT" expanded="True">
+            <Node name="Library" expanded="True">
+              <Node name="AppTTT" expanded="True">
+                <Node name="Interface" expanded="True" />
+                <Node name="App.xaml" expanded="True" />
+                <Node name="GeneralClass.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="AppTTT.Android" expanded="True">
+              <Node name="Assets" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jusajan/Desktop/Work/Projects/AppTTT/AppTTT/MainMenuPageModel.cs" relfile="AppTTT/MainMenuPageModel.cs" line="16" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

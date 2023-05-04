@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "ARykWAbSDEDjDyrV1xFl8jzMknXIqE0OM9MVmQ46Nz6FxM3MOYBJ/rBcwboynY4lNg0IB1OTcGeOcex5iji0LQ==",
+  "success": true,
+  "projectFilePath": "/Users/jusajan/Desktop/Work/Projects/AppTTT/AppTTT.iOS/AppTTT.iOS.csproj",
+  "expectedPackageFiles": [
+    "/Users/jusajan/.nuget/packages/fody/6.2.0/fody.6.2.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/freshmvvm/3.0.0/freshmvvm.3.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/methoddecorator.fody/1.1.1/methoddecorator.fody.1.1.1.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/microsoft.bcl.asyncinterfaces/5.0.0/microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/polly/7.2.2/polly.7.2.2.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/propertychanged.fody/3.2.7/propertychanged.fody.3.2.7.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/refit/6.0.94/refit.6.0.94.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlite/3.13.0/sqlite.3.13.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlite-net-pcl/1.7.335/sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.bundle_green/2.0.3/sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.core/2.0.3/sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.3/sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.net.http.json/5.0.0/system.net.http.json.5.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.reactive/4.0.0/system.reactive.4.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.runtime.compilerservices.unsafe/5.0.0/system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.runtime.interopservices.windowsruntime/4.3.0/system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.text.encodings.web/5.0.1/system.text.encodings.web.5.0.1.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/system.text.json/5.0.2/system.text.json.5.0.2.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/xamarin.essentials/1.7.0/xamarin.essentials.1.7.0.nupkg.sha512",
+    "/Users/jusajan/.nuget/packages/xamarin.forms/4.4.0.991265/xamarin.forms.4.4.0.991265.nupkg.sha512"
+  ],
+  "logs": []
+}

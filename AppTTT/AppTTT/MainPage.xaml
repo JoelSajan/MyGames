@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="AppTTT.MainPage"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor"
+                    Value="White"/>
+            <Setter Property="TextColor"
+                    Value="Gray"/>
+            <Setter Property="FontSize"
+                    Value="35"/>
+            <Setter Property="FontAttributes"
+                    Value="Bold"/>
+            <Setter Property="CornerRadius"
+                    Value="20"/>
+            <Setter Property="BorderColor"
+                    Value="Black"/>
+            <Setter Property="Padding"
+                    Value="10"/>
+            <Setter Property="BorderWidth"
+                    Value="3"/>
+            <Setter Property="Margin"
+                    Value="5"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout
+        Padding="10,10,10,10"
+        Spacing="0"  >
+        <Label Text="TICTACTOE" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" VerticalOptions="Center" />
+        <Grid RowSpacing="0"  VerticalOptions="CenterAndExpand" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" ColumnSpacing="0" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="{Binding Iteration1}" Command="{Binding Comand_Placer}" CommandParameter="0"/>
+                <Button Grid.Column="1" Text="{Binding Iteration2}" Command="{Binding Comand_Placer}" CommandParameter="1"/>
+                <Button Grid.Column="2" Text="{Binding Iteration3}" Command="{Binding Comand_Placer}" CommandParameter="2"/>
+            </Grid>
+            <Grid Grid.Row="1" ColumnSpacing="0" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="{Binding Iteration4}" Command="{Binding Comand_Placer}" CommandParameter="3"/>
+                <Button Grid.Column="1" Text="{Binding Iteration5}" Command="{Binding Comand_Placer}" CommandParameter="4"/>
+                <Button Grid.Column="2" Text="{Binding Iteration6}" Command="{Binding Comand_Placer}" CommandParameter="5"/>
+            </Grid>
+            <Grid Grid.Row="2" ColumnSpacing="0" HorizontalOptions="CenterAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="{Binding Iteration7}" Command="{Binding Comand_Placer}" CommandParameter="6"/>
+                <Button Grid.Column="1" Text="{Binding Iteration8}" Command="{Binding Comand_Placer}" CommandParameter="7"/>
+                <Button Grid.Column="2" Text="{Binding Iteration9}" Command="{Binding Comand_Placer}" CommandParameter="8"/>
+            </Grid>
+            <Grid.Triggers>
+                <DataTrigger TargetType="Grid"
+                             Binding="{Binding AnyOneWon}"
+                             Value="True">
+                    <Setter Property="IsVisible" Value="False"/>
+                </DataTrigger>
+            </Grid.Triggers>
+        </Grid>
+        
+        <Label x:Name="label" Text="PRESS YOUR BOX" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+        <StackLayout IsVisible="{Binding AnyOneWon}"
+                     HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand">
+            <Label Text="{Binding Winner}"
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="30"/>
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{523F81D7-5EE4-4961-A47D-E3009E8BB73B}|Default">
+  <MonoDevelop.Ide.ItemProperties.Project3.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project3/Pages/MyGamePage.xaml.cs">
+    <Files>
+      <File FileName="Project3/Pages/MyGamePage.xaml.cs" Line="169" Column="18" />
+      <File FileName="Project3/Pages/MyGamePage.xaml" />
+      <File FileName="Project3/App.xaml.cs" />
+      <File FileName="Project3/App.xaml" />
+      <File FileName="Project3/XuzzleRandPage.cs" />
+      <File FileName="Project3/XuzzleRandSquare.cs" />
+      <File FileName="Project3/Templates/HamburgerTemplate.xaml" />
+      <File FileName="Project3/Templates/HamburgerTemplate.xaml.cs" />
+      <File FileName="Project3/Pages/Box.cs" />
+      <File FileName="Project3/DataModels/AnimationModel.cs" />
+      <File FileName="Project3/PageModels/MenuListPageModel.cs" />
+      <File FileName="Project3/PageModels/MyGamePageModel.cs" />
+      <File FileName="Project3/Model/PlayerInfo.cs" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

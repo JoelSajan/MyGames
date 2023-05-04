@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:buttonView="clr-namespace:Project3.Pages" xmlns:local="clr-namespace:Project3.PageModels"
+    x:Class="Project3.Pages.MenuListPage"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <FlexLayout Direction="Column"
+                    BackgroundColor="#DB9D47">
+            <Grid
+                 x:Name="HangLabel"
+                 HorizontalOptions="End"
+                 FlexLayout.Basis="18%"
+                 VerticalOptions="EndAndExpand"
+                 Padding="0"
+                 Margin="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="B" Text="B" Grid.Column="1" CharacterSpacing="5" FontSize="60"/>
+                <Label x:Name="O" Text="O" Grid.Column="2" CharacterSpacing="5" FontSize="60"/>
+                <Label x:Name="X" Text="X" Grid.Column="3" CharacterSpacing="5" TextColor="Red" FontSize="60"/>
+                <Label x:Name="Z" Text="Z" Grid.Column="4" CharacterSpacing="5" FontSize="60"/>
+            </Grid>
+
+            <Label
+                  Margin="10,0"
+                  FlexLayout.Basis="8%"
+                  FontSize="12"
+                  CharacterSpacing="20"
+                  HorizontalTextAlignment="Center"
+                  VerticalTextAlignment="Start">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="This Is " CharacterSpacing="10"/>
+                        <Span Text="A" TextColor="Red"/>
+                        <Span Text=" Crazy Game" CharacterSpacing="10"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <StackLayout
+                  Padding="0,40,0,0"
+                  x:Name="MenuLayout"
+                  FlexLayout.Basis="74%"
+                  BackgroundColor="#3A3042"
+                  BindableLayout.ItemsSource="{Binding MenuItems}"
+                  VerticalOptions="CenterAndExpand"
+                  HorizontalOptions="CenterAndExpand">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <buttonView:ButtonView>
+                            <buttonView:ButtonView.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={x:Reference MenuLayout},Path=BindingContext.ClickCommand}" CommandParameter="{Binding .}"/>
+                            </buttonView:ButtonView.GestureRecognizers>
+                        </buttonView:ButtonView>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

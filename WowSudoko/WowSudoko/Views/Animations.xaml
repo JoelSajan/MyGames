@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WowSudoko.Views.Animations">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            
+             <Image  x:Name="Image1" MinimumHeightRequest="100" Source="Markdownscanner.png" Grid.Row="0" Grid.Column="1"/>
+             <Image  x:Name="Image2" Source="Markdownscanner.png" Grid.Row="1" Grid.Column="1"/>
+             <Image  x:Name="Image3" Source="Markdownscanner.png" Grid.Row="2" Grid.Column="1"/>
+
+            <Button Text="Single"  Grid.Row="0" Grid.Column="0" Clicked="Single_Clicked"/>
+            <Button Text="Compound"  Grid.Row="1" Grid.Column="0" Clicked="Compound_Clicked"/>
+            <Button Text="Composite"  Grid.Row="2" Grid.Column="0" Clicked="Composite_Clicked"/>
+
+            <Button Text="Cancel" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Clicked="Cancel_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

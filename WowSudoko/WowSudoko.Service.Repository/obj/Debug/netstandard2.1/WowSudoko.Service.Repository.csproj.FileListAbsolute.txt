@@ -1,0 +1,9 @@
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/bin/Debug/netstandard2.1/WowSudoko.Service.Repository.deps.json
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/bin/Debug/netstandard2.1/WowSudoko.Service.Repository.dll
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/bin/Debug/netstandard2.1/WowSudoko.Service.Repository.pdb
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.csproj.AssemblyReference.cache
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.AssemblyInfoInputs.cache
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.AssemblyInfo.cs
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.csproj.CoreCompileInputs.cache
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.dll
+/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/obj/Debug/netstandard2.1/WowSudoko.Service.Repository.pdb

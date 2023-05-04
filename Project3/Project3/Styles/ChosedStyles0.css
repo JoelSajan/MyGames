@@ -1,0 +1,20 @@
+﻿^contentpage {
+    background-color: white;
+}
+
+.labelStyle {
+    color: white;
+}
+
+.framStyle {
+    border-color: white;
+    background-color: black;
+}
+
+.button {
+    background-color: orange;
+}
+
+.mainGrid {
+    background-color: orange;
+}

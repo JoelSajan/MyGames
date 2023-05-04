@@ -1,0 +1,11 @@
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/actool/_PartialAppManifest.items
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/actool/_BundleResourceWithLogicalName.items
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/ibtool/_BundleResourceWithLogicalName.items
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/coremlc/_PartialAppManifest.items
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/coremlc/_BundleResourceWithLogicalName.items
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/optimized/performance.png
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/optimized/bulb.png
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/optimized/timeLoader.png
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/optimized/
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/WowSudoko.iOS.csproj.AssemblyReference.cache
+/Users/jusajan/Projects/WowSudoko/WowSudoko.iOS/obj/iPhoneSimulator/Debug/WowSudoko.iOS.csproj.CoreCompileInputs.cache

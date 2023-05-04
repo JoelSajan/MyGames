@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WowSudoko.Views.SudokoGameView"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:customcontrols="clr-namespace:WowSudoko.CustomControls"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:Name="SodukuGamePage"
+    Title="Flyout Game"
+    Shell.BackgroundColor="{AppThemeBinding Light=White,Dark=Black}"
+    Shell.ForegroundColor="{AppThemeBinding Light=Black,Dark=White}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyleUpper" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="LabelStyleLower" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="80"/>
+            </Style>
+            <Style x:Key="LabelStyle"
+                   TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="{AppThemeBinding Light=White, Dark=Black}" />
+            </Style>
+             <Style TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BorderColor" Value="{AppThemeBinding Light=Black, Dark=White}"/>
+            </Style>
+            <Style TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=White, Dark=Black}"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="8*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid   VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Grid.ColumnSpan="3">
+                <Path  Fill="#FFCA03"
+                        Aspect="Fill"
+                        Data="m154.23004,59.20751l327,0l0,52.03027c-50.5,71.18287 -157.5,18.29475 -327,41.84351l0,-93.87377z"></Path>
+                <Label TextColor="White"
+                        FontSize="10"
+                        Padding="30,0,0,0"
+                        Text=" Wow Sudoku"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Wow" Style="{StaticResource LabelStyleUpper}"/>
+                            <Span Text="&#10;"/>
+                            <Span Text="Sudoku" Style="{StaticResource LabelStyleLower}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+            <StackLayout Grid.Column="1"
+                         Grid.Row="1"
+                         Orientation="Horizontal"
+                         VerticalOptions="CenterAndExpand"
+                         BackgroundColor="{AppThemeBinding Light=White,Dark=Black}">
+                <Label TextColor="#F98404"
+                       HorizontalOptions="StartAndExpand"
+                       FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Level: "/>
+                            <Span Text="{Binding Level.LevelType}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.Triggers>
+                        <DataTrigger TargetType="Label" Binding="{Binding Level.LevelType}" Value="EASY">
+                            <Setter Property="TextColor" Value="Green"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Label" Binding="{Binding Level.LevelType}" Value="MEDIUM">
+                            <Setter Property="TextColor" Value="#FFCA03"/>
+                        </DataTrigger>
+                        <DataTrigger TargetType="Label" Binding="{Binding Level.LevelType}" Value="HARD">
+                            <Setter Property="TextColor" Value="Red"/>
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <Label 
+                       TextColor="#F98404"
+                       HorizontalOptions="EndAndExpand"
+                       FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Time: "/>
+                            <Span Text="{Binding Time}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+            <CollectionView
+                x:Name="collectionView"
+                Grid.Column="1"
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                ItemsSource="{Binding OuterBox}"
+                WidthRequest="290"
+                HeightRequest="290">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                        Span="3"
+                                        HorizontalItemSpacing="0"
+                                        VerticalItemSpacing="0"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="{AppThemeBinding Light=Black, Dark=White}"
+                               Padding="1"
+                               Margin="0">
+                        <FlexLayout
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                FlexLayout.Grow="1"
+                                Direction="Row"
+                                Wrap="Wrap"
+                                JustifyContent="Center"
+                                AlignContent="Start"
+                                AlignItems="Start"
+                                BindableLayout.ItemsSource="{Binding InnerBox}"
+                                BackgroundColor="{AppThemeBinding Light=Black, Dark=White}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Frame  CornerRadius="5"
+                                                BorderColor="#F98404"
+                                                BackgroundColor="#FF8D29"
+                                                Padding="0"
+                                                HeightRequest="30"
+                                                WidthRequest="30">
+                                            <Label  x:Name="ActualNumberLabel"
+                                                    Text="{Binding ActualNumber}"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HorizontalOptions="Fill"
+                                                    VerticalTextAlignment="Center"
+                                                    HorizontalTextAlignment="Center">
+                                            </Label>
+                                            <Frame.Triggers>
+                                                    <DataTrigger TargetType="Frame"
+                                                                Binding="{Binding IsNumberVisible}"
+                                                                Value="False">
+                                                        <Setter Property="IsVisible" Value="True" />
+                                                    </DataTrigger>
+                                                <DataTrigger TargetType="Frame"
+                                                                Binding="{Binding IsNumberVisible}"
+                                                                Value="True">
+                                                        <Setter Property="IsVisible" Value="False" />
+                                                    </DataTrigger>
+                                                </Frame.Triggers>
+                                        </Frame>
+                                        <Frame  CornerRadius="5"
+                                                IsVisible="{Binding IsNumberVisible}"
+                                                BorderColor="{Binding BoxColor}"
+                                                BackgroundColor="White"
+                                                Padding="0"
+                                                HeightRequest="30"
+                                                WidthRequest="30"
+                                                Margin="0">
+                                            <Entry HorizontalOptions="FillAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HorizontalTextAlignment="Center"
+                                                    VerticalTextAlignment="Center"
+                                                    Keyboard="Numeric"
+                                                    Margin="0"
+                                                    FontSize="15"
+                                                    PropertyChanged="Entry_PropertyChanged"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                                                    Text="{Binding EnteredNumber, Mode=TwoWay}"
+                                                    BackgroundColor="{Binding BoxColor, Mode=TwoWay}">
+                                            </Entry>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </FlexLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Grid Rotation="180"
+                  Grid.Row="3"
+                  Grid.ColumnSpan="3">
+                <Path  Fill="#FFCA03"
+                        Aspect="Fill"
+                        Data="m154.23004,59.20751l327,0l0,52.03027c-50.5,71.18287 -157.5,18.29475 -327,41.84351l0,-93.87377z"></Path>
+            </Grid>
+            <Grid x:Name="CheckButton"
+                  Grid.Row="3"
+                  Grid.ColumnSpan="3"
+                  BackgroundColor="Transparent"
+                  ColumnDefinitions="3*,4*,3*"
+                  RowDefinitions="2*,6*,2*">
+                <Path  Fill="#FFA500"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Aspect="Fill"
+                       Data="m328,251.5c-100.55249,0 -182,-9.8453 -182,-22c0,-12.1547 97.44751,-55 175,-55c77.55249,0 189,42.8453 189,55c0,12.1547 -81.44751,22 -182,22z"></Path>
+                <Label Text="Check"
+                       Grid.Column="1"
+                       Grid.RowSpan="3"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       VerticalOptions="CenterAndExpand"
+                       TextColor="White"
+                       FontSize="Medium"
+                       FontAttributes="Bold"/>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Animate_Check_Button"/>
+                    <TapGestureRecognizer Command="{Binding CheckBoardCommand}"/>
+                </Grid.GestureRecognizers>
+            </Grid>
+            <ImageButton
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand"
+                Grid.Column="2"
+                HeightRequest="50"
+                WidthRequest="50"
+                CornerRadius="10"
+                Source="bulb.png"
+                BackgroundColor="Transparent"
+                Clicked="Button_Clicked"/>
+
+            <Grid Grid.RowSpan="4"
+                  Grid.ColumnSpan="3"
+                  BackgroundColor="Black"
+                  Opacity="0.3"
+                  IsVisible="{Binding IsBusy}">
+            </Grid>
+            <customcontrols:CustomLoader x:Name="loaderImage"
+                                        Grid.RowSpan="4"
+                                        Grid.ColumnSpan="3"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand"
+                                        Source="timeLoader.png"
+                                        IsRunning="{Binding IsBusy}"
+                                        IsVisible="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

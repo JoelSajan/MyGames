@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dynamicStackLayout="clr-namespace:SuaveControls.DynamicStackLayout;assembly=SuaveControls.DynamicStackLayout"
+    x:Class="WowSudoko.Views.MicroAnimations"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Padding="30" WidthRequest="300">
+                <Label Text="Performance for last games"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+                <Label Text="Total games played is 3"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"
+                       FontSize="12"/>
+            </StackLayout>
+            <ScrollView Orientation="Horizontal"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Grid.Row="1"
+                        HorizontalScrollBarVisibility="Never"
+                        HeightRequest="60">
+                <StackLayout BindableLayout.ItemsSource="{Binding IconList}"
+                             Orientation="Horizontal"
+                             Padding="20, 0, 0, 0">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand"
+                                  Padding="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Grid.GestureRecognizers>
+                            <BoxView x:Name="boxViewColor"
+                                     BackgroundColor="{Binding Color}"
+                                     IsVisible="{Binding IsSelected}"
+                                     CornerRadius="20"
+                                     HorizontalOptions="FillAndExpand"
+                                     VerticalOptions="FillAndExpand"/>
+                            <Grid HorizontalOptions="FillAndExpand"
+                                  VerticalOptions="FillAndExpand"
+                                  ColumnDefinitions="Auto,Auto">
+                                <StackLayout x:Name="descpLabel"
+                                             Grid.Column="1"
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand"
+                                             TranslationX="-20"
+                                             IsVisible="False"
+                                             Padding="10,0,20,0">
+                                    <Label Text="{Binding Item}"
+                                           LineBreakMode="NoWrap"
+                                            FontAttributes="Bold"
+                                            TextColor="White"
+                                            FontSize="16"
+                                            HorizontalOptions="Center"
+                                           VerticalOptions="CenterAndExpand"/>
+                                    <Label Grid.Row="1"
+                                           LineBreakMode="NoWrap"
+                                           Text="{Binding Amount}"
+                                           FontAttributes="Bold"
+                                           TextColor="White"
+                                           FontSize="16"
+                                           HorizontalOptions="Center"
+                                          VerticalOptions="StartAndExpand"/>
+                                </StackLayout>
+                                <BoxView CornerRadius="20" HeightRequest="70" WidthRequest="70" BackgroundColor="Black" Opacity="0.3"/>
+                                <Image      Source="{Binding Image}"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center"
+                                            HeightRequest="30"
+                                            WidthRequest="30"/>
+                            </Grid>
+                        </Grid>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+            <Label FontAttributes="Bold"
+                   Padding="20"
+                    Grid.Row="2"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10"
+                    FontSize="35">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="$"/>
+                        <Span Text="{Binding Price, StringFormat='{0:N0}'}" TextColor="Black"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

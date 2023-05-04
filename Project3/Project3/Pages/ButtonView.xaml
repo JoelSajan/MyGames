@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Project3.Pages.ButtonView"
+    x:Name="BoxView">
+    <ContentView.Content>
+    <Frame
+        x:Name="frame"
+        Margin="30,10"
+        BorderColor="#474056"
+        BackgroundColor="#3E065F"
+        VerticalOptions="Start"
+        Padding="10"
+        CornerRadius="19">
+            <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    Margin="20,0"
+                    Text="{Binding MenuName}"
+                    FontSize="40"
+                    CharacterSpacing="10"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Start"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="White"/>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

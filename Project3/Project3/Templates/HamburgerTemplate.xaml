@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Project3.DataModels"
+    xmlns:view="clr-namespace:Project3.Pages"
+    x:Class="Project3.Templates.HamburgerTemplate">
+    <FlexLayout Direction="Column" >
+        <Grid FlexLayout.Basis="10%"
+              x:Name="mainGrid"
+              StyleClass="mainGrid">
+            <Image
+                Margin="10"
+                Source="hamburgerIcon.png"
+                IsVisible="false"
+                Aspect="AspectFit"
+                HeightRequest="20"
+                WidthRequest="20"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="StartAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ImageButton_Clicked"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image
+                Margin="15,5,0,15"
+                Source="home.png"
+                Aspect="AspectFit"
+                WidthRequest="40"
+                HeightRequest="30"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="StartAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="HomeButton_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+        <Grid FlexLayout.Basis="90%">
+            <ContentPresenter>
+            </ContentPresenter>
+            <Grid x:Name="hamburger" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Menu" TextDecorations="Underline" FontSize="30" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <StackLayout Grid.Column="0" Grid.Row="1" BackgroundColor="White">
+                    <ListView ItemTapped="ListView_ItemTapped">
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type local:NavigationModel}">
+                                <local:NavigationModel Image="settings.png" Title="Settings" TargetType="{x:Type view:SettingsPage}"/>
+                                <local:NavigationModel Image="difficulty.png" Title="Difficulty" TargetType="{x:Type view:MyTabbedPage}"/>
+                                <local:NavigationModel Image="exit.png" Title="Exit" TargetType="{x:Type view:MenuListPage}"/>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding Image}" Margin="10"/>
+                                        <Label Padding="10" Text="{Binding Title}" FontSize="Medium"/>
+                                    </StackLayout>
+                                 </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <Grid
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    BackgroundColor="AliceBlue"
+                    Opacity="0.5">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageButton_Clicked"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Grid>
+        </Grid>
+    </FlexLayout>
+</ContentView>

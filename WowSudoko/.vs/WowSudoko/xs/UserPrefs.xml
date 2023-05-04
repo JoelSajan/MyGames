@@ -1,0 +1,72 @@
+﻿<Properties StartupConfiguration="{271DF8D9-7746-4702-A1EB-1B32A9E9B60B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WowSudoko/ViewModels/SudokoGameViewModel.cs">
+    <Files>
+      <File FileName="WowSudoko/Views/SudokoGameView.xaml.cs" Line="48" Column="1" />
+      <File FileName="WowSudoko/Views/SudokoGameView.xaml" />
+      <File FileName="WowSudoko/ViewModels/SudokoGameViewModel.cs" Line="170" Column="64" />
+      <File FileName="WowSudoko/ViewModels/XamarinFormsFiveViewModel.cs" />
+      <File FileName="WowSudoko/Views/XamarinFormsFiveView.xaml" />
+      <File FileName="WowSudoko/Views/XamarinFormsFiveView.xaml.cs" />
+      <File FileName="WowSudoko/Views/SudokoMenuView.xaml" />
+      <File FileName="WowSudoko/Views/SudokoMenuView.xaml.cs" />
+      <File FileName="WowSudoko/App.xaml.cs" />
+      <File FileName="WowSudoko/Views/FlyoutPageView.xaml" />
+      <File FileName="WowSudoko/Views/FlyoutPageView.xaml.cs" />
+      <File FileName="WowSudoko/App.xaml" />
+      <File FileName="WowSudoko/Model/SudokoSqlModel.cs" />
+      <File FileName="WowSudoko/Managers/SQLHelperManager.cs" />
+      <File FileName="WowSudoko/ViewModels/SudokoMenuViewModel.cs" />
+      <File FileName="WowSudoko/Logic/LogicMaker.cs" />
+      <File FileName="WowSudoko/CustomControls/CustomLoader.cs" />
+      <File FileName="WowSudoko.Android/MainActivity.cs" />
+      <File FileName="WowSudoko.iOS/AppDelegate.cs" />
+      <File FileName="WowSudoko/ViewModels/SampleLoaderPageModel.cs" />
+      <File FileName="WowSudoko/ViewModels/BasePageModel.cs" />
+      <File FileName="WowSudoko/ViewModels/IndexterClass.cs" />
+      <File FileName="WowSudoko/ViewModels/NewBallPageModel.cs" />
+      <File FileName="WowSudoko/Utilities/EndPointService.cs" />
+      <File FileName="WowSudoko/Utilities/Interface/IEndpointService.cs" />
+      <File FileName="WowSudoko/Utilities/CheckForBoardApi.cs" />
+      <File FileName="WowSudoko/Employee.cs" />
+      <File FileName="WowSudoko.Android/Services/HTTPClientService_Android.cs" />
+      <File FileName="WowSudoko/Utilities/Interface/IHTTPClientService.cs" />
+      <File FileName="WowSudoko/Models/SudokoModel.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WowSudoko" expanded="True">
+            <Node name="Libraries" expanded="True">
+              <Node name="WowSudoko" expanded="True">
+                <Node name="Models" expanded="True" />
+                <Node name="Utilities" expanded="True">
+                  <Node name="Interface" expanded="True" />
+                </Node>
+                <Node name="ViewModels" expanded="True">
+                  <Node name="SudokoGameViewModel.cs" selected="True" />
+                </Node>
+              </Node>
+            </Node>
+            <Node name="WowSudoko.Android" expanded="True">
+              <Node name="Services" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>WowSudoko/WowSudoko.Infrastructure/WowSudoko.Infrastructure.csproj</String>
+    <String>WowSudoko/WowSudoko.Managers/WowSudoko.Managers.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.WowSudoko.Android AndroidDesignerPreferredTheme="MainTheme" PreferredExecutionTarget="Android.pixel_2_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/jusajan/Projects/WowSudoko/WowSudoko/ViewModels/SudokoMenuViewModel.cs" relfile="WowSudoko/ViewModels/SudokoMenuViewModel.cs" line="71" column="1" />
+      <Breakpoint file="/Users/jusajan/Projects/WowSudoko/WowSudoko/Utilities/CheckForBoardApi.cs" relfile="WowSudoko/Utilities/CheckForBoardApi.cs" line="31" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

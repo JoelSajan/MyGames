@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+    x:Class="WowSudoko.Views.PathTester">
+    <ContentPage.Content>
+        <Grid >
+            <BoxView Opacity="0.3" BackgroundColor="Green"
+                     Grid.Row="0"/>
+            <!--<Path Fill="White"
+                  Aspect="Uniform"
+                  HorizontalOptions="Center"
+                  Data="M28,21H27V7a1,1,0,0,0-1-1H6A1,1,0,0,0,5,7V21H4a1,1,0,0,0-1,1,5,5,0,0,0,5,5H24a5,5,0,0,0,5-5A1,1,0,0,0,28,21ZM7,8H25V21H7ZM24,25H8a3,3,0,0,1-2.83-2H26.83A3,3,0,0,1,24,25Z"
+                  Opacity="1"
+                  HeightRequest="100"
+                  WidthRequest="100"
+                  Grid.Row="1"/>-->
+            <!--<forms:SignaturePadView StrokeColor="Black"
+                                    BackgroundColor="Pink"
+                                    Grid.Row="2"/>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

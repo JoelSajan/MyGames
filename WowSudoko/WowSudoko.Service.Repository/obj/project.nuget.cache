@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "afDfGSJWtTVhjbhqs5V65BNJFzYTvM7a/k/ed7l/2UciwbTPTpdEc3HQjjDYYtZKuiAfjv87tfEGlqmt0E4kLA==",
+  "success": true,
+  "projectFilePath": "/Users/jusajan/Projects/WowSudoko/WowSudoko.Service.Repository/WowSudoko.Service.Repository.csproj",
+  "expectedPackageFiles": [
+    "/Users/jusajan/.nuget/packages/xamarin.forms/5.0.0.2401/xamarin.forms.5.0.0.2401.nupkg.sha512"
+  ],
+  "logs": []
+}

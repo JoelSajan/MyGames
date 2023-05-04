@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WowSudoko.Views.SudokoMenuView"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:customcontrols="clr-namespace:WowSudoko.CustomControls"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    NavigationPage.HasNavigationBar="False"
+    x:Name="sudokoMenuPage"
+    Title="Flyout Menu">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyleUpper" TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="LabelStyleLower" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="80"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="0"
+              Padding="0"
+              Margin="0"
+              BackgroundColor="#F98404">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+            <Grid VerticalOptions="FillAndExpand"
+                  HorizontalOptions="FillAndExpand"
+                  ColumnDefinitions="1.5*,7*,1.5*">
+                <Path x:Name="path"
+                      Focused="Path_Focused"
+                      Unfocused="Path_UnFocused"
+                      Fill="#FFCA03"
+                      Grid.ColumnSpan="3"
+                      Aspect="Fill"
+                      Data="m154.23004,59.20751l327,0l0,52.03027c-50.5,71.18287 -157.5,18.29475 -327,41.84351l0,-93.87377z"></Path>
+                <lottie:AnimationView
+                        x:Name="settingsAnimation"
+                        Grid.Column="2"
+                        Margin="-10,10,10,0"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        HorizontalOptions="StartAndExpand"
+                        VerticalOptions="StartAndExpand"
+                        AutoPlay="False"
+                        Loop="False"
+                        OnClick="Settings_Clicked"
+                        Animation="SettingsAnimation.json">
+                </lottie:AnimationView>
+                <Label TextColor="White"
+                       Grid.ColumnSpan="3"
+                       FontSize="10"
+                       Padding="30,0,0,0"
+                       Text=" Wow Sudoku"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Wow" Style="{StaticResource LabelStyleUpper}"/>
+                            <Span Text="&#10;"/>
+                            <Span Text="Sudoku" Style="{StaticResource LabelStyleLower}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+             
+            <Grid Padding="0"
+                  Margin="0"
+                  Grid.Row="1"
+                  ColumnDefinitions="2*,6*,2*"
+                  VerticalOptions="CenterAndExpand">
+                <lottie:AnimationView
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="playAnimation"
+                    AutoPlay="True"
+                    Loop="True"
+                    OnClick="Button_Clicked"
+                    Animation="PlayAnimation.json">
+                </lottie:AnimationView>
+                <!--<Grid Grid.Row="1"
+                      Grid.Column="1"
+                      VerticalOptions="StartAndExpand">
+                    <Image Source="Quit.png"
+                           HeightRequest="50"
+                           WidthRequest="50"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand"/>
+                    <ImageButton
+                           Source="Performance.png"
+                           Grid.Column="1"
+                           HeightRequest="50"
+                           WidthRequest="50"
+                           Clicked="Button_Clicked"
+                           BackgroundColor="Transparent"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="StartAndExpand"/>
+                </Grid>-->
+            </Grid>
+
+            <StackLayout x:Name="LevelStackLayout"
+                         Orientation="Horizontal"
+                         VerticalOptions="StartAndExpand"
+                         HorizontalOptions="CenterAndExpand"
+                         BindableLayout.ItemsSource="{Binding LevelList}"
+                         Grid.Row="2"
+                         Spacing="20">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Padding="0"
+                                   Margin="0"
+                                   HasShadow="True"
+                                   BorderColor="#293462"
+                                   CornerRadius="10"
+                                   HeightRequest="100"
+                                   WidthRequest="100">
+                                <Label HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"
+                                       BackgroundColor="#FFA500"
+                                       TextColor="White"
+                                       FontAttributes="Bold"
+                                       Text="{Binding LevelType}">
+                                    <Label.Triggers>
+                                        <DataTrigger TargetType="Label" Binding="{Binding IsSelected}" Value="True">
+                                            <Setter Property="BackgroundColor" Value="#F24C4C"/>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={x:Reference LevelStackLayout}, Path=BindingContext.OnLevelSelectedCommand}" CommandParameter="{Binding .}"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+                <Grid Grid.RowSpan="3"
+                      BackgroundColor="Transparent"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="CenterAndExpand"
+                      RowDefinitions="*,*,*,*,*"
+                      IsVisible="{Binding IsBusy}">
+                    <customcontrols:CustomLoader x:Name="loaderImage"
+                                                 Grid.Row="2"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 VerticalOptions="FillAndExpand"
+                                                 Source="timeLoader.png"
+                                                 IsRunning="{Binding IsBusy}"/>
+
+                </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

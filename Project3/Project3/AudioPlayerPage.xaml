@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Project3.AudioPlayerPage"
+    x:Name="AudioPage">
+    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Fill">  
+      <Button Text="{Binding CommandText}"  
+        Command="{Binding PlayPauseCommand}" />  
+    </StackLayout>  
+</ContentPage>

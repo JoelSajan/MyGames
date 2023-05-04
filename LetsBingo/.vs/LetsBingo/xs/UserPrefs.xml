@@ -1,0 +1,63 @@
+﻿<Properties StartupConfiguration="{DCCF0B74-3E81-445C-A54D-7A4CE9B24909}|Default">
+  <MonoDevelop.Ide.ItemProperties.LetsBingo.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.Zebra" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LetsBingo/Managers/PageService.cs">
+    <Files>
+      <File FileName="LetsBingo/Interface/IDeviceHelper.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/Interface/IPageService.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/ViewModel/BaseModels/RegisterLog.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/App.xaml" />
+      <File FileName="LetsBingo/Views/IntroPage.xaml.cs" />
+      <File FileName="LetsBingo/Views/MenuPage.xaml.cs" />
+      <File FileName="LetsBingo/Views/IntroPage.xaml" />
+      <File FileName="LetsBingo/Views/MenuPage.xaml" />
+      <File FileName="LetsBingo/Views/AutoGenerateBoardPage.xaml" />
+      <File FileName="LetsBingo/ViewModel/BaseModels/BasePageModel.cs" Line="21" Column="1" />
+      <File FileName="LetsBingo/ViewModel/IntroPageModel.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/ViewModel/MenuPageModel.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/ViewModel/Numbers.cs" Line="10" Column="40" />
+      <File FileName="LetsBingo.Android/MainActivity.cs" />
+      <File FileName="LetsBingo/Views/AutoGenerateBoardPage.xaml.cs" />
+      <File FileName="LetsBingo/ViewModel/AutoGenerateBoardPageModel.cs" Line="33" Column="55" />
+      <File FileName="LetsBingo/Managers/PageService.cs" Line="23" Column="6" />
+      <File FileName="LetsBingo/Managers/DataService.cs" Line="1" Column="1" />
+      <File FileName="LetsBingo/Interface/IDataCommunications.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LetsBingo" expanded="True">
+            <Node name="LetsBingo" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Interface" expanded="True" />
+              <Node name="Managers" expanded="True">
+                <Node name="PageService.cs" selected="True" />
+              </Node>
+              <Node name="ViewModel" expanded="True">
+                <Node name="BaseModels" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="AutoGenerateBoardPage.xaml" expanded="True" />
+                <Node name="IntroPage.xaml" expanded="True" />
+                <Node name="MenuPage.xaml" expanded="True" />
+              </Node>
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+            <Node name="LetsBingo.Android" expanded="True">
+              <Node name="Assets" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

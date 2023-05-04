@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<pages:PopupPage
+    xmlns:pages="http://rotorgames.com"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="WowSudoko.Popup.SettingsPopupPage">
+    <Frame WidthRequest="300"
+          HeightRequest="300"
+          CornerRadius="15"
+          HasShadow="True"
+          BackgroundColor="White"
+          HorizontalOptions="Center"
+          VerticalOptions="Center">
+    </Frame>
+</pages:PopupPage>

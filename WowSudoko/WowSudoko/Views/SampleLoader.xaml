@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:settings="clr-namespace:WowSudoko.Views"
+    x:Class="WowSudoko.Views.SampleLoader">
+    <ContentPage.Content>
+        <Label x:Name="MyLabel" Text="SampleText"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand">
+         <Label.Triggers>
+             <DataTrigger TargetType="Label" Binding="{Binding IsSyncing}" Value="True">
+                 <DataTrigger.EnterActions>
+                     <settings:StartAnimationAction x:Name="StartAnimation"/>
+                 </DataTrigger.EnterActions>
+                 <DataTrigger.ExitActions>
+                     <settings:StopAnimationAction/>
+                 </DataTrigger.ExitActions>
+             </DataTrigger>
+         </Label.Triggers>
+         </Label>
+    </ContentPage.Content>
+</ContentPage>
