@@ -1,0 +1,21 @@
+<%- include('partials/header'); -%>
+<h1>Compose</h1>
+<form class="item" action="/compose" method="post">
+  <div class="form-group" style="font-weight:700px;">
+    <b>
+    Title
+    </b>
+  <input class="title" type="text" name="entryValue" value="">
+  </div>
+  <div class="form-group" style="font-weight=700px;padding-top:10px;">
+    <b>
+    Post
+    </b>
+  <textarea  class="post" id="w3review" name="textArea" rows="4" cols="50">
+  </textarea>
+  </div>
+  <div style="padding-top:10px">
+  <button type="submit" name="button" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<%- include('partials/footer'); -%>

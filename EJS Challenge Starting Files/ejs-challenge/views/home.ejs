@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+<h1>Home</h1>
+<p><%= startContent %></p>
+<%
+posts.forEach(function(element){%>
+  <h1><%= element.entryValue %></h1>
+  <%if(element.textArea.length<10){%>
+      <p><%=element.textArea%></p>
+      <%}else{%>
+        <div style="display:flex;">
+          <p><%=element.textArea.slice(0,10)+'...' %></p>
+          <a href="/<%=element.entryValue%>">Read More!</a>
+        </div>
+      <%}%>
+<%});%>
+<%- include('partials/footer'); -%>
